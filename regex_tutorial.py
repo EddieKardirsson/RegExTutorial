@@ -55,3 +55,18 @@ print(re.findall('\w*.$', data), '\n')
 
 # Get the first sentence of the string:
 print(re.findall('^.*!', data), '\n')
+
+# Quantifiers
+
+# {n} - Basic quantifier. Match exactly n preceding tokens
+print(re.findall('\w{3}', data), '\n')
+
+# {n,} - Match at least n preceding tokens.
+print(re.findall('\w{3,}', data), '\n')
+
+# {n, m} - Match between n and m tokens.
+print(re.findall('\w{2,3}', data), '\n')
+
+# Match at least one of a word
+print(re.findall('\w{1,}', data))
+print(re.findall('\w+', data), '\n')
