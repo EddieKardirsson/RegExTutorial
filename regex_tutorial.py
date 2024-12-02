@@ -43,4 +43,15 @@ print(re.findall('\d', data), '\n') # \d = numerical digits
 print(re.findall('\w', data), '\n') # \w = characters part of a word, alphabetical
 print(re.findall('\s', data), '\n') # \s = match whitespace characters
 
-print(re.findall('\d+\w+\s', data), '\n') 
+print(re.findall('\d+\w+\s', data), '\n')
+
+# Anchors
+
+# ^ - Caret symbol represents beginning of the string
+print(re.findall('^\w*', data), '\n')
+
+# $ - Dollar sign represents end of the string
+print(re.findall('\w*.$', data), '\n')
+
+# Get the first sentence of the string:
+print(re.findall('^.*!', data), '\n')
