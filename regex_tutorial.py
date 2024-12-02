@@ -70,3 +70,26 @@ print(re.findall('\w{2,3}', data), '\n')
 # Match at least one of a word
 print(re.findall('\w{1,}', data))
 print(re.findall('\w+', data), '\n')
+
+# Groups
+
+# () (?:) - Form group by surrounding part of regular expression with parentheses.
+
+# Capturing Groups
+print(re.search('(\d+)(th)', data).groups(), '\n')
+
+# Non-Capturing Groups
+print(re.search('(?:\w+ \w+)', data).group(), '\n')
+print(re.search('(?:\w+ \w+){3}', data).group(), '\n')
+
+# Applying Conditional Logic
+print(re.findall('(?:\w{7}|\w{4})', data), '\n')
+
+# Capture the phone numbers from a string
+test = """
+(999)999-9999 fdesoifdsiohf893u92kjnskoflom+13(999)999-9999 
+fioj2ji39010-3  
++124(99999)99-999-9999999-9'
+"""
+
+print(re.findall('(?:\+\d+)?\(\d+\)(?:\d+-)+\d+', test), '\n')
